@@ -10,11 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+int	ft_strncmp(char *s1, char *s2, int n)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else if (c >= 48 && c <= 57)
-		return (1);
+	int	i;
+
+	i = 0;
+	while ((s1[i] != '\0' && s2[i] != '\0') && i < n)
+	{
+		if (s1[i] != s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
+	}
 	return (0);
 }

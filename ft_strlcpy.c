@@ -10,11 +10,21 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include <stddef.h>
+
+size_t	ft_strlcpy(char *dest, char *src, size_t siz )
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (i < siz - 1 && src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	if (siz != 0)
+	{
+		dest[i] = '\0';
+	}
+	return (i);
 }

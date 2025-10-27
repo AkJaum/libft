@@ -10,11 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include <stddef.h>
+
+char	*ft_strchr(const char *str, int search_str)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		if (str[i] == (char *)search_str)
+			return ((char *) str + i);
+		i++;
+	}
+	if ((char *)search_str == '\0')
+		return ((char *) str + i);
+	return (NULL);
 }

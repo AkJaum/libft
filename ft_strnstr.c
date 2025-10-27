@@ -10,11 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+char	*ft_strnstr(const char *str, const char *s_str, size_t len);
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	j;
+	
+	i = 0;
+	if (!s_str[0])
+    		return (str);
+	while (str[i] != '\0' && i < len)
+	{
+		ii = 0;
+		while(str[i + j] != '\0' && (i + j) < len 
+			&& str[i + j] == s_str[j])
+		{
+			if (s_str[ii] == '\0')
+				return (str + i)
+			ii++;
+		}
+		i++;
+	}
+	return (NULL);
 }

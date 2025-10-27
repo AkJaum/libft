@@ -12,11 +12,11 @@
 
 #include <stddef.h>
 
-void	*memcpy(void *dest, const void *src, size_t num)
+void	*ft_memcpy(void *dest, const void *src, size_t num)
 {
-	unsigned char *str_dest;
-	unsigned char *str_src;
-	size_t	i;
+	unsigned char	*str_dest;
+	unsigned char	*str_src;
+	size_t			i;
 
 	str_dest = (unsigned char *)dest;
 	str_src = (unsigned char *)src;
@@ -26,5 +26,5 @@ void	*memcpy(void *dest, const void *src, size_t num)
 		str_dest[i] = str_src[i];
 		i++;
 	}
-	return(dest);
+	return (dest);
 }

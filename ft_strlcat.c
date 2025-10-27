@@ -10,11 +10,31 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include <stddef.h>
+
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	size_t	i;
+	size_t	ii;
+	size_t	lensrc;
+
+	i = 0;
+	ii = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (src[ii] != '\0')
+		ii++;
+	if (size <= i)
+		return (size + ii);
+	lensrc = ii;
+	ii = 0;
+	while (src[ii] != '\0' && i <= size - 1)
+	{
+		dest[i] = src[ii];
+		i++;
+		ii++;
+	}
+	if (i < size)
+		dest[i] = '\0';
+	return (i + lensrc);
 }

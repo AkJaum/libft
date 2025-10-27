@@ -10,11 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include <stddef.h>
+
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
+	unsigned char	*str;
+	unsigned char	cc;
+	size_t			i;
+
+	str = (unsigned char *)s;
+	cc = (unsigned char)c;
+	i = 0;
+	while (i < n)
+	{
+		if (str[i] == cc)
+			return ((void *)(str + i));
+		i++;
+	}
+	return (NULL);
 }

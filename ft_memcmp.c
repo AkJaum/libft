@@ -10,11 +10,22 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include <stddef.h>
+
+int	ft_memcmp(const void *p1, const void *p2, size_t n)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else if (c >= 48 && c <= 57)
-		return (1);
+	unsigned char	*ptr1;
+	unsigned char	*ptr2;
+	size_t			i;
+
+	ptr1 = (unsigned char *)p1;
+	ptr2 = (unsigned char *)p2;
+	i = 0;
+	while (i < n)
+	{
+		if(ptr1[i] != ptr2[i])
+			return (ptr1[i] - ptr2[i]);
+		i++;
+	}
 	return (0);
 }

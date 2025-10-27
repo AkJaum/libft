@@ -10,11 +10,26 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+int	ft_atoi(const char *n)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	else if (c >= 48 && c <= 57)
-		return (1);
-	return (0);
-}
+	int	i;
+	int	result;
+	int	sign;
+	
+	i = 0;
+	result = 0;
+	sign = 1;
+	while (n[i] >= 9 && n[i] <= 13 || n[i] == ' ')
+		i++;
+	if (n[i] == '+' || n[i] == '-')
+	{
+		if (n[i] == '-')
+			sign = sign * -1;
+		i++;
+	}
+	while (n[i] >= '0' && n[i] <= '9')
+	{
+		result = result * 10 + (n[i] - '0');
+		i++;
+	}
+	return (result * sign);
