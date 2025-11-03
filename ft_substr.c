@@ -1,29 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akjaum <akjaum@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: Invalid date        by jneris-d          #+#    #+#             */
-/*   Updated: 2025/11/03 14:53:07 by akjaum           ###   ########.fr       */
+/*   Updated: 2025/11/03 14:19:04 by akjaum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int search_str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
+	char	*subs;
+	size_t		i;
 
-	i = 0;
-	while (str[i] != '\0')
+	if (!s)
+		return (NULL);
+	i = ft_strlen((char *)s);
+	if (start >= i)
 	{
-		if (str[i] == (char)search_str)
-			return ((char *)str + i);
+		subs = malloc(1);
+		if (!subs)
+			return (NULL);
+		subs[0] = '\0';
+		return (subs);
+	}
+	if (len > i - start)
+		len = i - start;
+	subs = malloc(len + 1);
+	if (!subs)
+		return (NULL);
+	i = 0;
+	while (i < len && s[start + i])
+	{
+		subs[i] = s[start + i];
 		i++;
 	}
-	if ((char)search_str == '\0')
-		return ((char *) str + i);
-	return (NULL);
+	subs[i] = '\0';
+	return (subs);
 }

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_main.c                                          :+:      :+:    :+:   */
+/*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jneris-d <tbpjaum@outlook.com>             +#+  +:+       +#+        */
+/*   By: akjaum <akjaum@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 0000/00/00 00:00:00 by jneris-d          #+#    #+#             */
-/*   Updated: 0000/00/00 00:00:00 by jneris-d         ###   ########.fr       */
+/*   Created: Invalid date        by jneris-d          #+#    #+#             */
+/*   Updated: 2025/11/03 14:17:24 by akjaum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
 
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
@@ -27,5 +28,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t num);
 void	*ft_memmove(void *dest, const void *src, size_t len);
 size_t	ft_strlcpy(char *dest, char *src, size_t siz);
 size_t	ft_strlcat(char *dest, const char *src, size_t size);
-
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 #endif

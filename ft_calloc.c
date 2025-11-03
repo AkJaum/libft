@@ -1,20 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_main.c                                          :+:      :+:    :+:   */
+/*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jneris-d <tbpjaum@outlook.com>             +#+  +:+       +#+        */
+/*   By: akjaum <akjaum@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 0000/00/00 00:00:00 by jneris-d          #+#    #+#             */
-/*   Updated: 0000/00/00 00:00:00 by jneris-d         ###   ########.fr       */
+/*   Created: Invalid date        by jneris-d          #+#    #+#             */
+/*   Updated: 2025/11/03 14:58:33 by akjaum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+void	*ft_calloc(size_t n, size_t size)
 {
-	if (c >= 'a' && c <= 'z')
-		return (c - 32);
-	return (0);
+	unsigned char	*arr;
+	size_t			i;
+
+	i = 0;
+	arr = malloc(n * size);
+	if (!arr)
+		return (NULL);
+	while (i < (n * size))
+	{
+		arr[i] = 0;
+		i++;
+	}
+	return (arr);
 }

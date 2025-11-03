@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akjaum <akjaum@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: Invalid date        by jneris-d          #+#    #+#             */
-/*   Updated: 2025/11/03 14:53:07 by akjaum           ###   ########.fr       */
+/*   Updated: 2025/11/03 15:00:27 by akjaum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
-char	*ft_strchr(const char *str, int search_str)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int	i;
+	char	*stotal;
+	size_t		len;
 
-	i = 0;
-	while (str[i] != '\0')
-	{
-		if (str[i] == (char)search_str)
-			return ((char *)str + i);
-		i++;
-	}
-	if ((char)search_str == '\0')
-		return ((char *) str + i);
-	return (NULL);
+	if (!s1 || !s2)
+		return (NULL);
+	len = ft_strlen((char *)s1) + ft_strlen((char *)s2) + 1;
+	stotal = malloc(len);
+	if (!stotal)
+		return (NULL);
+	ft_strlcpy(stotal, (char *)s1, len);
+	ft_strlcat(stotal, s2, len);
+	return (stotal);
 }

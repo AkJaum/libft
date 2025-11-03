@@ -1,32 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_main.c                                          :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jneris-d <tbpjaum@outlook.com>             +#+  +:+       +#+        */
+/*   By: akjaum <akjaum@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 0000/00/00 00:00:00 by jneris-d          #+#    #+#             */
-/*   Updated: 0000/00/00 00:00:00 by jneris-d         ###   ########.fr       */
+/*   Created: Invalid date        by jneris-d          #+#    #+#             */
+/*   Updated: 2025/11/03 14:57:33 by akjaum           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strnstr(const char *str, const char *s_str, size_t len);
+#include "libft.h"
+
+char	*ft_strnstr(const char *str, const char *s_str, size_t len)
 {
 	size_t	i;
 	size_t	j;
 	
 	i = 0;
 	if (!s_str[0])
-    		return (str);
+    		return ((char *)str);
 	while (str[i] != '\0' && i < len)
 	{
-		ii = 0;
+		j = 0;
 		while(str[i + j] != '\0' && (i + j) < len 
 			&& str[i + j] == s_str[j])
 		{
-			if (s_str[ii] == '\0')
-				return (str + i)
-			ii++;
+			if (s_str[j] == '\0')
+				return ((char *)str + i);
+			j++;
 		}
 		i++;
 	}
