@@ -12,27 +12,49 @@
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*subs;
-	size_t	i;
+	char	c;
+	long	nbr;
 
-	if (!s)
-		return (NULL);
-	i = ft_strlen((char *)s);
-	if (start >= i)
-		return (ft_strdup(""));
-	if (len > i - start)
-		len = i - start;
-	subs = malloc(len + 1);
-	if (!subs)
-		return (NULL);
-	i = 0;
-	while (i < len && s[start + i])
+	nbr = n;
+	if (nbr < 0)
+		write(fd, "-", 1);
+	if (nbr >= 10)
 	{
-		subs[i] = s[start + i];
-		i++;
+		ft_putnbr_fd(nbr / 10, fd);
+		c = (nbr % 10) + '0';
+		write(fd, &c, 1);
 	}
-	subs[i] = '\0';
-	return (subs);
+	if (nbr < 10)
+	{
+		c = nbr + '0';
+		write(fd, &c, 1);
+	}
 }
+
+/*void	ft_putnbr(int n)
+{
+        char    c;
+        long    nbr;
+
+        nbr = n;
+        if (nbr < 0)
+                write(1, "-", 1);
+        if (nbr >= 10)
+        {
+		ft_putnbr(nbr / 10);
+                c = (nbr % 10) + '0';
+                write(1, &c, 1);
+        }
+        if (nbr < 10)
+        {
+                c = nbr + '0';
+                write(1, &c, 1);
+        }
+}
+
+int	main(void)
+{
+	ft_putnbr(1200);
+}*/

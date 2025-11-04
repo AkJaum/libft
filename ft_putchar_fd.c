@@ -12,27 +12,7 @@
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putchar_fd(char c, int fd)
 {
-	char	*subs;
-	size_t	i;
-
-	if (!s)
-		return (NULL);
-	i = ft_strlen((char *)s);
-	if (start >= i)
-		return (ft_strdup(""));
-	if (len > i - start)
-		len = i - start;
-	subs = malloc(len + 1);
-	if (!subs)
-		return (NULL);
-	i = 0;
-	while (i < len && s[start + i])
-	{
-		subs[i] = s[start + i];
-		i++;
-	}
-	subs[i] = '\0';
-	return (subs);
+	write(fd, &c, 1);
 }

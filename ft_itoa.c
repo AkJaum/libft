@@ -12,27 +12,45 @@
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_countint(int n)
 {
-	char	*subs;
-	size_t	i;
+	int	count;
 
-	if (!s)
-		return (NULL);
-	i = ft_strlen((char *)s);
-	if (start >= i)
-		return (ft_strdup(""));
-	if (len > i - start)
-		len = i - start;
-	subs = malloc(len + 1);
-	if (!subs)
-		return (NULL);
-	i = 0;
-	while (i < len && s[start + i])
+	count = 1;
+	if (n < 0)
 	{
-		subs[i] = s[start + i];
-		i++;
+		n = -n;
+		count++;
 	}
-	subs[i] = '\0';
-	return (subs);
+	while (n >= 10)
+	{
+		n = n / 10;
+		count++;
+	}
+	return (count);
+}
+
+char	*ft_itoa(int n)
+{
+	char	*asciin;
+	long	nbr;
+	int		count;
+
+	nbr = n;
+	count = ft_countint(nbr);
+	if (nbr < 0)
+		nbr = -nbr;
+	asciin = malloc(count + 1);
+	if (!asciin)
+		return (NULL);
+	asciin[count] = '\0';
+	while (count > 0)
+	{
+		count--;
+		asciin[count] = (nbr % 10) + '0';
+		nbr = nbr / 10;
+		if (n < 0 && count == 0)
+			asciin[0] = '-';
+	}
+	return (asciin);
 }

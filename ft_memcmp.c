@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akjaum <akjaum@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jneris-d <tbpjaum@outlook.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: Invalid date        by jneris-d          #+#    #+#             */
-/*   Updated: 2025/11/03 14:53:49 by akjaum           ###   ########.fr       */
+/*   Created: 0000/00/00 00:00:00 by jneris-d          #+#    #+#             */
+/*   Updated: 0000/00/00 00:00:00 by jneris-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	ft_memcmp(const void *p1, const void *p2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if(ptr1[i] != ptr2[i])
+		if (ptr1[i] != ptr2[i])
 			return (ptr1[i] - ptr2[i]);
 		i++;
 	}

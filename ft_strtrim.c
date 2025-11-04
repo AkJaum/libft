@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtrim.c                                       :+:      :+:    :+:   */
+/*   ft_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akjaum <akjaum@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jneris-d <tbpjaum@outlook.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: Invalid date        by jneris-d          #+#    #+#             */
-/*   Updated: 2025/11/03 14:44:41 by akjaum           ###   ########.fr       */
+/*   Created: 0000/00/00 00:00:00 by jneris-d          #+#    #+#             */
+/*   Updated: 0000/00/00 00:00:00 by jneris-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,8 +31,8 @@ static int	ft_char_in_set(char c, const char *set)
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*strtrimmed;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
 	j = ft_strlen((char *) s1) - 1;

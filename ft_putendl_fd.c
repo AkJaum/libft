@@ -12,27 +12,15 @@
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+void	ft_putendl_fd(char *s, int fd)
 {
-	char	*subs;
-	size_t	i;
+	int	i;
 
-	if (!s)
-		return (NULL);
-	i = ft_strlen((char *)s);
-	if (start >= i)
-		return (ft_strdup(""));
-	if (len > i - start)
-		len = i - start;
-	subs = malloc(len + 1);
-	if (!subs)
-		return (NULL);
 	i = 0;
-	while (i < len && s[start + i])
+	while (s[i] != '\0')
 	{
-		subs[i] = s[start + i];
+		write(fd, &s[i], 1);
 		i++;
 	}
-	subs[i] = '\0';
-	return (subs);
+	write(fd, "\n", 1);
 }

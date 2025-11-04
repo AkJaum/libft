@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin.c                                       :+:      :+:    :+:   */
+/*   ft_main.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: akjaum <akjaum@student.42.fr>              +#+  +:+       +#+        */
+/*   By: jneris-d <tbpjaum@outlook.com>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: Invalid date        by jneris-d          #+#    #+#             */
-/*   Updated: 2025/11/03 15:00:27 by akjaum           ###   ########.fr       */
+/*   Created: 0000/00/00 00:00:00 by jneris-d          #+#    #+#             */
+/*   Updated: 0000/00/00 00:00:00 by jneris-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*stotal;
-	size_t		len;
+	size_t	len;
 
 	if (!s1 || !s2)
 		return (NULL);

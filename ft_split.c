@@ -12,27 +12,60 @@
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+int	ft_countwords(char const *s, char c)
 {
-	char	*subs;
-	size_t	i;
+	int	i;
+	int	n;
+
+	i = 0;
+	n = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		if (s[i] != c && s[i] != '\0')
+			n++;
+		while (s[i] && s[i] != c)
+			i++;
+	}
+	return (n);
+}
+
+void	ft_dosplit(char **strarray, char const *s, unsigned int i, char c)
+{
+	unsigned int	start;
+	unsigned int	j;
+
+	j = 0;
+	while (s[i] != '\0')
+	{
+		while (s[i] == c && s[i] != '\0')
+			i++;
+		if (s[i] != '\0' && s[i] != c)
+		{
+			start = i;
+			while (s[i] != c && s[i] != '\0')
+				i++;
+			strarray[j] = ft_substr(s, start, i - start);
+			j++;
+		}
+	}
+	strarray[j] = NULL;
+}
+
+char	**ft_split(char const *s, char c)
+{
+	unsigned int	i;
+	int				nwords;
+	char			**strarray;
 
 	if (!s)
 		return (NULL);
-	i = ft_strlen((char *)s);
-	if (start >= i)
-		return (ft_strdup(""));
-	if (len > i - start)
-		len = i - start;
-	subs = malloc(len + 1);
-	if (!subs)
-		return (NULL);
 	i = 0;
-	while (i < len && s[start + i])
-	{
-		subs[i] = s[start + i];
-		i++;
-	}
-	subs[i] = '\0';
-	return (subs);
+	nwords = ft_countwords(s, c);
+	strarray = malloc((nwords + 1) * sizeof(char *));
+	if (!strarray)
+		return (NULL);
+	ft_dosplit(strarray, s, i, c);
+	return (strarray);
 }
