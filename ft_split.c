@@ -14,7 +14,7 @@
 #include "libft.h"
 
 //Conta quantas palavaras (strings) vão exister dentro do array para alocar mem
-int	ft_countwords(char const *s, char c)
+static int	ft_countwords(char const *s, char c)
 {
 	int	i;
 	int	n;
@@ -34,7 +34,7 @@ int	ft_countwords(char const *s, char c)
 }
 
 //Função auxiliar para fazer o split
-void	ft_dosplit(char **strarray, char const *s, char c)
+static void	ft_dosplit(char **strarray, char const *s, char c)
 {
 	unsigned int	start;
 	unsigned int	i;

@@ -12,7 +12,7 @@
 
 //Copia o conteudo de uma string para a outra e retorna o tamanho da string 
 //copiada
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcpy(char *dest, const char *src, size_t siz )
 {

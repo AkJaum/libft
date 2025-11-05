@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 //Concateca duas strings e retorna o tamanho das duas strings juntas
-#include <stddef.h>
+#include "libft.h"
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {

@@ -14,7 +14,7 @@
 #include "libft.h"
 
 //Conta quantos digitos tem a int
-int	ft_countint(long n)
+static int	ft_countint(long n)
 {
 	int	count;
 
