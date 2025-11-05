@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Localiza a primeira ocorrencia de um caractere especifico na string
 #include <stddef.h>
 
 char	*ft_strchr(const char *str, int search_str)

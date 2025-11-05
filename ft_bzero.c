@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Atribuir 0 a todos os bytes de um vetor
 #include <stddef.h>
 
 void	ft_bzero(void *ptr, size_t num)

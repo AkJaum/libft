@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Encontra e retorna a primeira ocorrencia de s_str dentro de str
 #include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *s_str, size_t len)
@@ -23,13 +24,11 @@ char	*ft_strnstr(const char *str, const char *s_str, size_t len)
 	while (str[i] != '\0' && i < len)
 	{
 		j = 0;
-		while (str[i + j] != '\0' && (i + j) < len
-			&& str[i + j] == s_str[j])
-		{
-			if (s_str[j] == '\0')
-				return ((char *)str + i);
+		while (str[i + j] != '\0' && s_str[j] != '\0'
+			&& i + j < len && str[i + j] == s_str[j])
 			j++;
-		}
+		if (s_str[j] == '\0')
+			return ((char *)str + i);
 		i++;
 	}
 	return (NULL);

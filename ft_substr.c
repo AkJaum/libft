@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Cria uma substring a partir da string original, start é onde começa a copiar
+//e para em len
 #include "libft.h"
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)

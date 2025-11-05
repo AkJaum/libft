@@ -10,8 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Retorna um array de strings, resultado da separação da string s a cada c
 #include "libft.h"
 
+//Conta quantas palavaras (strings) vão exister dentro do array para alocar mem
 int	ft_countwords(char const *s, char c)
 {
 	int	i;
@@ -31,12 +33,15 @@ int	ft_countwords(char const *s, char c)
 	return (n);
 }
 
-void	ft_dosplit(char **strarray, char const *s, unsigned int i, char c)
+//Função auxiliar para fazer o split
+void	ft_dosplit(char **strarray, char const *s, char c)
 {
 	unsigned int	start;
+	unsigned int	i;
 	unsigned int	j;
 
 	j = 0;
+	i = 0;
 	while (s[i] != '\0')
 	{
 		while (s[i] == c && s[i] != '\0')
@@ -55,17 +60,15 @@ void	ft_dosplit(char **strarray, char const *s, unsigned int i, char c)
 
 char	**ft_split(char const *s, char c)
 {
-	unsigned int	i;
 	int				nwords;
 	char			**strarray;
 
 	if (!s)
 		return (NULL);
-	i = 0;
 	nwords = ft_countwords(s, c);
 	strarray = malloc((nwords + 1) * sizeof(char *));
 	if (!strarray)
 		return (NULL);
-	ft_dosplit(strarray, s, i, c);
+	ft_dosplit(strarray, s, c);
 	return (strarray);
 }

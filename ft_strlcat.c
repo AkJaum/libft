@@ -10,13 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Concateca duas strings e retorna o tamanho das duas strings juntas
 #include <stddef.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	ii;
-	size_t	lensrc;
+	size_t	lentotal;
 
 	i = 0;
 	ii = 0;
@@ -24,17 +25,17 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		i++;
 	while (src[ii] != '\0')
 		ii++;
+	lentotal = ii + i;
 	if (size <= i)
 		return (size + ii);
-	lensrc = ii;
 	ii = 0;
-	while (src[ii] != '\0' && i <= size - 1)
+	while (src[ii] != '\0' && i < size - 1)
 	{
 		dest[i] = src[ii];
 		i++;
 		ii++;
 	}
-	if (i < size)
-		dest[i] = '\0';
-	return (i + lensrc);
+	dest[i] = '\0';
+	i++;
+	return (lentotal);
 }

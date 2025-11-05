@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Retorna a ultima ocorrencia de search_char na string
 #include "libft.h"
 
 char	*ft_strrchr(char *str, int search_char)

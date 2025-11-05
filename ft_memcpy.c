@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Copia todos os bytes de um vetor para outro
 #include <stddef.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t num)

@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Aplica a função F para cada caracter de s e cria uma nova string com o retorno
+//de F para cada caracter
 #include "libft.h"
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))

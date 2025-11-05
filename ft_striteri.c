@@ -10,6 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Parece com a strmapi, mas aqui ele passa um ponteiro para a memoria, assim a
+//função pode modificar a string sem criar uma nova como na mapi
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;

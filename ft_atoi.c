@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Converte ascii para int
 #include "libft.h"
 
 int	ft_atoi(const char *n)

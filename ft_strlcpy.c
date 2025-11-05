@@ -10,21 +10,25 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Copia o conteudo de uma string para a outra e retorna o tamanho da string 
+//copiada
 #include <stddef.h>
 
-size_t	ft_strlcpy(char *dest, char *src, size_t siz )
+size_t	ft_strlcpy(char *dest, const char *src, size_t siz )
 {
 	size_t	i;
 
 	i = 0;
-	while (i < siz - 1 && src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
 	if (siz != 0)
 	{
+		while (i < siz - 1 && src[i] != '\0')
+		{
+			dest[i] = src[i];
+			i++;
+		}
 		dest[i] = '\0';
 	}
+	while (src[i] != '\0')
+		i++;
 	return (i);
 }

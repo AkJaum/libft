@@ -10,6 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+//Transforma letras minusculas em maiusculas
 #include "libft.h"
 
 int	ft_toupper(int c)
