@@ -6,14 +6,14 @@
 /*   By: jneris-d <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 15:54:18 by jneris-d          #+#    #+#             */
-/*   Updated: 2025/11/06 15:54:20 by jneris-d         ###   ########.fr       */
+/*   Updated: 2025/11/06 19:06:06 by jneris-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 //Retorna o tamanho de uma string
 #include "libft.h"
 
-int	ft_strlen(const char *str)
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
