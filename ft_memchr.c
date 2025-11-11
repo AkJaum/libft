@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Localiza a primeira ocorrencia de um valor especifico na memoria
 #include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)

@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Atribui um mesmo valor a todos os bytes de um vetor
 #include "libft.h"
 
 void	*ft_memset(void *ptr, int value, size_t num)

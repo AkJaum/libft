@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Move os bytes de um vetor para o outro
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t len)

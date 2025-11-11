@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Printa um número na saida especificada em fd
 #include "libft.h"
 
 void	ft_putnbr_fd(int n, int fd)
@@ -36,29 +35,3 @@ void	ft_putnbr_fd(int n, int fd)
 		write(fd, &c, 1);
 	}
 }
-
-/*void	ft_putnbr(int n)
-{
-        char    c;
-        long    nbr;
-
-        nbr = n;
-        if (nbr < 0)
-                write(1, "-", 1);
-        if (nbr >= 10)
-        {
-		ft_putnbr(nbr / 10);
-                c = (nbr % 10) + '0';
-                write(1, &c, 1);
-        }
-        if (nbr < 10)
-        {
-                c = nbr + '0';
-                write(1, &c, 1);
-        }
-}
-
-int	main(void)
-{
-	ft_putnbr(1200);
-}*/

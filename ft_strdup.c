@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Cria uma nova string usando malloc e copia str para a nova string
 #include "libft.h"
 
 char	*ft_strdup(const char *str)

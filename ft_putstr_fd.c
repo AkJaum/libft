@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Printa a string na saida especificada em fd
 #include "libft.h"
 
 void	ft_putstr_fd(char *s, int fd)

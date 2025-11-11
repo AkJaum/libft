@@ -10,10 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Converte uma variavel int para ascii
 #include "libft.h"
 
-//Conta quantos digitos tem a int
 static int	ft_countint(long n)
 {
 	int	count;

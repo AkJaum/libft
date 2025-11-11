@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Printa uma string na saida especificada em fd e pula uma linha no final
 #include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)

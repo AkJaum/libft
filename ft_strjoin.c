@@ -10,8 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Diferente da strlcat, strjoin cria uma nova string que recebe o valor de
-//duas strings concatenadas. Também retorna um pontiero para a nova string
 #include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)

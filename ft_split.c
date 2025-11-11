@@ -10,10 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Retorna um array de strings, resultado da separação da string s a cada c
 #include "libft.h"
 
-//Conta quantas palavaras (strings) vão exister dentro do array para alocar mem
 static int	ft_countwords(char const *s, char c)
 {
 	int	i;

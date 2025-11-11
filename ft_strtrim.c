@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
-//Checa se o caracter atual de s1 existe dentro de set
+
 static int	ft_charinset(char c, const char *set)
 {
 	int	i;
@@ -26,7 +26,6 @@ static int	ft_charinset(char c, const char *set)
 	return (0);
 }
 
-//Remove das pontas de uma string o set de caracteres
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	char	*strtrimmed;
@@ -42,10 +41,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	strtrimmed = ft_substr(s1, i, j - i + 1);
 	return (strtrimmed);
 }
-
-/*int	main(int argc, char **argv)
-{
-	if (argc < 3)
-		return (0);
-	printf("String trimmed: %s", ft_strtrim(argv[1], argv[2]));
-}*/

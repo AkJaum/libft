@@ -10,7 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//Encontra e retorna a primeira ocorrencia de s_str dentro de str
 #include "libft.h"
 
 char	*ft_strnstr(const char *str, const char *s_str, size_t len)
