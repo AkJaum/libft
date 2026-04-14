@@ -266,8 +266,8 @@ int	main(void)
 	report_result(&stats, "ft_isprint", "c=' '", expected, actual,
 		(ft_isprint(' ') != 0) == (isprint(' ') != 0));
 
-	snprintf(expected, sizeof(expected), "%d", (int)strlen("libft"));
-	snprintf(actual, sizeof(actual), "%d", ft_strlen("libft"));
+	snprintf(expected, sizeof(expected), "%zu", strlen("libft"));
+	snprintf(actual, sizeof(actual), "%zu", ft_strlen("libft"));
 	report_result(&stats, "ft_strlen", "str=\"libft\"", expected, actual,
 		ft_strlen("libft") == (int)strlen("libft"));
 

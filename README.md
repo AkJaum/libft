@@ -1,6 +1,6 @@
 # Libft
 
-Implementação em C de uma biblioteca. Esta biblioteca reúne funções de manipulação de caracteres, memória, strings, alocação e saída.
+Implementação em C de uma biblioteca. Esta biblioteca reúne funções de manipulação de caracteres, memória, strings, alocação e saída. Para rodar ela rapidamente, use make e depois make m no terminal.
 
 ## Descrição
 
