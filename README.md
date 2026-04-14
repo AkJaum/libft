@@ -83,12 +83,11 @@ Isto deve gerar a `libft.a` conforme o `Makefile` presente.
 
 ## Testes
 
-O repositório inclui uma pasta de testes em `tester/` com um conjunto de testes automatizados.
+O repositório inclui um arquivo de `testes` com um conjunto de testes automatizados.
 
-Para executar os testes de uma função ou de todo o conjunto, entre na pasta `tester` e execute:
+Para executar os testes de uma função ou de todo o conjunto, execute:
 
 ```bash
-cd tester
 make m
 ```
 
